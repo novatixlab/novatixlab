@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NOVATIX LAB — 3D 홀로그램 터치버튼 카탈로그</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script src="./vendor/resources.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#000;color:#f5f5f7;font-family:'Pretendard Variable',Pretendard,system-ui,sans-serif}
+a{color:#6fb3ff;text-decoration:none}a:hover{color:#9cc9ff}
+</style>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#0b0d14"/><text x="100" y="118" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="900" font-size="54" fill="#6fb3ff">N</text></svg></template>
+</helmet>
+
+<div style="max-width:1080px;margin:0 auto;background:#000;padding:0 clamp(20px,5vw,64px) 90px;box-sizing:border-box">
+
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:26px 0 0">
+    <span style="font-family:Archivo,sans-serif;font-weight:900;font-size:17px;letter-spacing:-.02em">NOVATIX LAB</span>
+    <span style="font-size:11.5px;font-weight:700;letter-spacing:.26em;color:rgba(245,245,247,.45)">PREMIUM CATALOG</span>
+  </div>
+
+  <div style="text-align:center;padding:64px 0 10px">
+    <div style="font-size:12.5px;font-weight:700;letter-spacing:.3em;color:#6fb3ff;margin-bottom:20px">3D TOUCH HOLOGRAM DISPLAY</div>
+    <h1 style="margin:0;font-size:clamp(34px,5.4vw,60px);font-weight:800;line-height:1.18;letter-spacing:-.035em">3D HOLOGRAM<br>터치버튼</h1>
+    <p style="margin:22px auto 0;max-width:560px;font-size:clamp(15px,1.8vw,19px);line-height:1.7;color:rgba(245,245,247,.6);text-wrap:pretty">공중에 떠 있는 듯한 입체 홀로그램으로<br>행사와 전시를 더욱 특별하게 연출합니다.</p>
+  </div>
+
+  <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;align-items:end;padding:30px 0 0">
+    <div style="position:absolute;left:20%;right:20%;top:10%;height:70%;background:radial-gradient(ellipse,rgba(63,131,255,.16),transparent 65%);pointer-events:none"></div>
+    <img src="assets/holo-hero-4views.png" alt="3D 홀로그램 터치버튼 — 정면 · 측면 · 후면 · 사선 4방향 뷰" style="position:relative;grid-column:1 / -1;width:100%;border-radius:20px;display:block"></img>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:34px 0 0">
+    <sc-for list="{{ features }}" as="f" hint-placeholder-count="5">
+      <span style="font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:999px;border:1px solid rgba(111,179,255,.35);color:#d6e6ff;background:rgba(111,179,255,.06)">✓&nbsp; {{ f }}</span>
+    </sc-for>
+  </div>
+
+  <div style="text-align:center;padding:84px 0 30px">
+    <div style="font-size:11.5px;font-weight:700;letter-spacing:.3em;color:rgba(245,245,247,.4)">ON STAGE</div>
+    <h2 style="margin:12px 0 0;font-size:clamp(24px,3.2vw,36px);font-weight:800;letter-spacing:-.03em">무대를 완성하는 연출</h2>
+    <p style="margin:14px auto 0;max-width:560px;font-size:14px;line-height:1.7;color:rgba(245,245,247,.55);text-wrap:pretty">멀티 유닛 구성으로 LED 무대와 연동해<br>글자·심볼이 공중에 떠오르는 오프닝 연출이 가능합니다.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+    <img src="assets/holo-scene-aifesta.jpg" alt="AI FESTA 2026 — 6대 멀티 유닛 무대 연출" style="width:100%;border-radius:18px;display:block"></img>
+    <img src="assets/holo-scene-itexpo.jpg" alt="IT EXPO — LED 연동 홀로그램 타이포 퍼포먼스" style="width:100%;border-radius:18px;display:block"></img>
+  </div>
+
+  <div style="text-align:center;padding:84px 0 30px">
+    <div style="font-size:11.5px;font-weight:700;letter-spacing:.3em;color:rgba(245,245,247,.4)">HUMAN SCALE</div>
+    <h2 style="margin:12px 0 0;font-size:clamp(24px,3.2vw,36px);font-weight:800;letter-spacing:-.03em">키높이에 맞춘 완벽한 시선</h2>
+    <p style="margin:14px auto 0;max-width:560px;font-size:14px;line-height:1.7;color:rgba(245,245,247,.55);text-wrap:pretty">전체 높이 1,100mm — 성인 키(165~175cm) 기준 가슴 높이로<br>터치와 관람 모두에 가장 편안한 눈높이를 제공합니다.</p>
+  </div>
+  <img src="assets/holo-height-scale-clean.jpg" alt="키높이 비교 — 165cm · 175cm 성인 기준 1100mm 유닛" style="width:100%;border-radius:20px;display:block"></img>
+
+  <div style="text-align:center;padding:84px 0 34px">
+    <div style="font-size:11.5px;font-weight:700;letter-spacing:.3em;color:rgba(245,245,247,.4)">PRICING</div>
+    <h2 style="margin:12px 0 0;font-size:clamp(24px,3.2vw,36px);font-weight:800;letter-spacing:-.03em">렌탈 &amp; 운영 요금</h2>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+    <div style="background:#111114;border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:32px">
+      <div style="font-size:12px;font-weight:800;letter-spacing:.2em;color:#6fb3ff;margin-bottom:14px">RENTAL</div>
+      <div style="font-size:19px;font-weight:800;margin-bottom:18px">3D 터치 홀로그램</div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-top:1px solid rgba(255,255,255,.08)">
+        <span style="font-size:14.5px;color:rgba(245,245,247,.75)">5대 이상 렌탈</span>
+        <span style="font-size:20px;font-weight:800">1대 300,000원</span>
+      </div>
+      <div style="margin-top:8px;font-size:12.5px;color:rgba(245,245,247,.45)">※ 5대 미만은 별도 문의</div>
+      <div style="margin-top:18px;padding:16px 18px;border-radius:12px;background:rgba(111,179,255,.08);border:1px solid rgba(111,179,255,.3)">
+        <div style="font-size:11.5px;font-weight:800;letter-spacing:.14em;color:#6fb3ff;margin-bottom:6px">EVENT PROMOTION</div>
+        <div style="font-size:14.5px;font-weight:700;line-height:1.5">6대 이상 렌탈 시 <span style="color:#6fb3ff">1대 250,000원</span></div>
+      </div>
+    </div>
+    <div style="background:#111114;border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:32px">
+      <div style="font-size:12px;font-weight:800;letter-spacing:.2em;color:#6fb3ff;margin-bottom:14px">OPERATION</div>
+      <div style="font-size:19px;font-weight:800;margin-bottom:18px">운영 인력</div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-top:1px solid rgba(255,255,255,.08)">
+        <span style="font-size:14.5px;color:rgba(245,245,247,.75)">오퍼레이터</span>
+        <span style="font-size:20px;font-weight:800">1인 300,000원</span>
+      </div>
+      <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:8px">
+        <sc-for list="{{ opIncludes }}" as="o" hint-placeholder-count="4">
+          <span style="font-size:12.5px;font-weight:700;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.06);color:rgba(245,245,247,.8)">{{ o }}</span>
+        </sc-for>
+      </div>
+      <div style="margin-top:14px;font-size:12.5px;color:rgba(245,245,247,.45)">전일 리허설 동일 적용</div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:74px 0 34px">
+    <div style="font-size:11.5px;font-weight:700;letter-spacing:.3em;color:rgba(245,245,247,.4)">CONTENT</div>
+    <h2 style="margin:12px 0 0;font-size:clamp(24px,3.2vw,36px);font-weight:800;letter-spacing:-.03em">홀로그램 콘텐츠 제작</h2>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+    <div style="background:#111114;border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:30px;display:flex;flex-direction:column">
+      <div style="font-size:17px;font-weight:800;margin-bottom:4px">텍스트 Type</div>
+      <div style="font-size:12.5px;color:rgba(245,245,247,.5);margin-bottom:16px">로고 · 문구 · 심볼 회전 콘텐츠</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px">
+        <image-slot id="content-text-a" shape="rounded" style="aspect-ratio:1;display:block" placeholder="텍스트 A 예시"></image-slot>
+        <image-slot id="content-text-b" shape="rounded" style="aspect-ratio:1;display:block" placeholder="텍스트 B 예시"></image-slot>
+      </div>
+      <div style="display:flex;flex-direction:column;margin-top:auto">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-top:1px solid rgba(255,255,255,.08)">
+          <span style="font-size:13.5px;color:rgba(245,245,247,.75)">A Type</span>
+          <span style="font-size:16.5px;font-weight:800">200,000원</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-top:1px solid rgba(255,255,255,.08)">
+          <span style="font-size:13.5px;color:rgba(245,245,247,.75)">B Type</span>
+          <span style="font-size:16.5px;font-weight:800">400,000원</span>
+        </div>
+      </div>
+    </div>
+    <div style="background:#111114;border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:30px;display:flex;flex-direction:column">
+      <div style="font-size:17px;font-weight:800;margin-bottom:4px">미디어 Type</div>
+      <div style="font-size:12.5px;color:rgba(245,245,247,.5);margin-bottom:16px">제품 · 브랜드 3D 영상 콘텐츠</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px">
+        <image-slot id="content-media-a" shape="rounded" style="aspect-ratio:1;display:block" placeholder="미디어 A 예시"></image-slot>
+        <image-slot id="content-media-b" shape="rounded" style="aspect-ratio:1;display:block" placeholder="미디어 B 예시"></image-slot>
+      </div>
+      <div style="display:flex;flex-direction:column;margin-top:auto">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-top:1px solid rgba(255,255,255,.08)">
+          <span style="font-size:13.5px;color:rgba(245,245,247,.75)">A Type</span>
+          <span style="font-size:16.5px;font-weight:800">800,000원</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-top:1px solid rgba(255,255,255,.08)">
+          <span style="font-size:13.5px;color:rgba(245,245,247,.75)">B Type</span>
+          <span style="font-size:16.5px;font-weight:800">1,500,000원</span>
+        </div>
+      </div>
+    </div>
+    <div style="background:#111114;border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:30px;display:flex;flex-direction:column">
+      <div style="font-size:17px;font-weight:800;margin-bottom:4px">LED 연동 퍼포먼스</div>
+      <div style="font-size:12.5px;color:rgba(245,245,247,.5);margin-bottom:16px">LED + 홀로그램 연동 콘텐츠</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:16px">
+        <image-slot id="content-led-a" shape="rounded" style="aspect-ratio:1;display:block" placeholder="A 예시"></image-slot>
+        <image-slot id="content-led-b" shape="rounded" style="aspect-ratio:1;display:block" placeholder="B 예시"></image-slot>
+        <image-slot id="content-led-c" shape="rounded" style="aspect-ratio:1;display:block" placeholder="C 예시"></image-slot>
+      </div>
+      <div style="display:flex;flex-direction:column;margin-top:auto">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-top:1px solid rgba(255,255,255,.08)">
+          <span style="font-size:13.5px;color:rgba(245,245,247,.75)">A Type</span>
+          <span style="font-size:16.5px;font-weight:800">1,000,000원</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-top:1px solid rgba(255,255,255,.08)">
+          <span style="font-size:13.5px;color:rgba(245,245,247,.75)">B Type</span>
+          <span style="font-size:16.5px;font-weight:800">1,500,000원</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-top:1px solid rgba(255,255,255,.08)">
+          <span style="font-size:13.5px;color:rgba(245,245,247,.75)">C Type</span>
+          <span style="font-size:16.5px;font-weight:800">별도 협의</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+    <div style="border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:22px 26px;display:flex;align-items:center;gap:16px">
+      <span style="font-size:11.5px;font-weight:800;letter-spacing:.14em;color:rgba(245,245,247,.5);flex-shrink:0">설치 안내</span>
+      <span style="font-size:14px;line-height:1.6;color:rgba(245,245,247,.8)">LED 300인치 이상 연동 시 홀로그램 1대당 설치비 <b>200,000원</b></span>
+    </div>
+  </div>
+
+  <div style="margin-top:80px;text-align:center;border-top:1px solid rgba(255,255,255,.1);padding-top:40px">
+    <p style="margin:0 auto;max-width:640px;font-size:clamp(15px,1.9vw,19px);font-weight:700;line-height:1.75;letter-spacing:-.01em;text-wrap:pretty">공중에 떠 있는 듯한 홀로그램으로 관람객의 시선을 사로잡습니다.</p>
+    <p style="margin:14px auto 0;max-width:600px;font-size:13.5px;line-height:1.8;color:rgba(245,245,247,.55)">기업행사 · 박람회 · 컨퍼런스 · 신제품 발표 · 브랜드 런칭 · VIP 행사에 최적화된<br>인터랙티브 홀로그램 디스플레이입니다.</p>
+    <div style="margin-top:34px;display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap">
+      <span style="font-family:Archivo,sans-serif;font-weight:900;font-size:15px;letter-spacing:-.02em">NOVATIX LAB</span>
+      <span style="font-size:12.5px;color:rgba(245,245,247,.45)">novatixlab@gmail.com</span>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;features&quot;:{&quot;editor&quot;:null,&quot;default&quot;:[&quot;모든 장비 무선 운영&quot;,&quot;설치 · 철수 간편&quot;,&quot;제품 높이 1,100mm&quot;,&quot;여성 1인도 이동 가능한 경량 설계&quot;,&quot;탈부착 아크릴 보호커버 기본 제공 (VIP 행사 안전 고려)&quot;],&quot;tsType&quot;:&quot;string[]&quot;},&quot;opIncludes&quot;:{&quot;editor&quot;:null,&quot;default&quot;:[&quot;설치&quot;,&quot;철수&quot;,&quot;현장 운영&quot;,&quot;전일 리허설&quot;],&quot;tsType&quot;:&quot;string[]&quot;},&quot;contents&quot;:{&quot;editor&quot;:null,&quot;default&quot;:[{&quot;name&quot;:&quot;텍스트형&quot;,&quot;sub&quot;:&quot;로고 · 문구 · 심볼 회전 콘텐츠&quot;,&quot;rows&quot;:[{&quot;t&quot;:&quot;A Type&quot;,&quot;p&quot;:&quot;200,000원&quot;},{&quot;t&quot;:&quot;B Type&quot;,&quot;p&quot;:&quot;400,000원&quot;}]},{&quot;name&quot;:&quot;영상형&quot;,&quot;sub&quot;:&quot;제품 · 브랜드 3D 영상 콘텐츠&quot;,&quot;rows&quot;:[{&quot;t&quot;:&quot;A Type&quot;,&quot;p&quot;:&quot;800,000원&quot;},{&quot;t&quot;:&quot;B Type&quot;,&quot;p&quot;:&quot;1,500,000원&quot;}]},{&quot;name&quot;:&quot;LED 연동 퍼포먼스&quot;,&quot;sub&quot;:&quot;LED + 홀로그램 연동 콘텐츠&quot;,&quot;rows&quot;:[{&quot;t&quot;:&quot;A Type&quot;,&quot;p&quot;:&quot;1,000,000원&quot;},{&quot;t&quot;:&quot;B Type&quot;,&quot;p&quot;:&quot;1,500,000원&quot;},{&quot;t&quot;:&quot;C Type&quot;,&quot;p&quot;:&quot;별도 협의&quot;}]}],&quot;tsType&quot;:&quot;object[]&quot;}}"></script>
+</body>
+</html>

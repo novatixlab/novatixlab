@@ -1,0 +1,23 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: novatixlab-web:latest
+    container_name: novatixlab-web
+    restart: unless-stopped
+    ports:
+      # 호스트(시놀로지) 포트 : 컨테이너 포트
+      # 8088 은 DSM 이 쓰지 않는 포트라서 기본값으로 잡았습니다. 바꾸려면 .env 의 WEB_PORT 만 수정하세요.
+      - "${WEB_PORT:-8088}:80"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/healthz"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
