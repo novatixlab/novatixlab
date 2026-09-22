@@ -1,66 +1,609 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>노바틱스랩</title>
-<meta name="description" content="노바틱스랩 홈페이지 — 배포 준비 중">
-<style>
-  :root {
-    --bg: #ffffff;
-    --fg: #16181d;
-    --muted: #5d6470;
-    --line: #e3e6ea;
-    --accent: #2b5cff;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0e1013;
-      --fg: #f2f4f7;
-      --muted: #9aa2af;
-      --line: #23272e;
-      --accent: #7f9dff;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    padding: 16px;
-    background: var(--bg);
-    color: var(--fg);
-    font-family: system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo",
-                 "Noto Sans KR", "Malgun Gothic", sans-serif;
-    line-height: 1.6;
-  }
-  main { width: 100%; max-width: 560px; }
-  h1 { font-size: 1.75rem; margin: 0 0 8px; letter-spacing: -0.02em; }
-  p { color: var(--muted); margin: 0 0 24px; }
-  .card { border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
-  .card h2 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;
-             color: var(--muted); margin: 0 0 12px; }
-  ol { margin: 0; padding-left: 20px; }
-  li { margin-bottom: 8px; }
-  code { background: var(--line); border-radius: 4px; padding: 1px 5px;
-         font-size: 0.9em; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
-  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%;
-         background: var(--accent); margin-right: 8px; vertical-align: middle; }
-</style>
+<title>NOVATIX LAB — 행사장의 공간을 기획하고, 경험으로 완성합니다</title>
+<meta name="description" content="트라이폴드 LED · 라이팅 플로어 · 나비드론 · 3D 홀로그램 — 행사 장비 렌탈과 연출·송출을 한 팀이 책임집니다.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NOVATIX LAB — 행사장의 공간을 기획하고, 경험으로 완성합니다">
+<meta property="og:description" content="트라이폴드 LED · 라이팅 플로어 · 나비드론 · 3D 홀로그램 — 행사 장비 렌탈부터 연출·송출까지. 지금 바로 예약 문의하세요.">
+<meta property="og:url" content="https://novatixlab.com/">
+<meta property="og:image" content="https://novatixlab.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script src="./vendor/resources.js"></script>
+<script src="./support.js"></script>
 </head>
 <body>
-<main>
-  <h1><span class="dot"></span>노바틱스랩</h1>
-  <p>컨테이너가 정상적으로 구동 중입니다. 이 화면은 실제 홈페이지로 교체될 임시 페이지입니다.</p>
-  <div class="card">
-    <h2>다음 단계</h2>
-    <ol>
-      <li>Claude 디자인에서 내보낸 웹페이지 파일을 <code>site/</code> 폴더에 넣습니다.</li>
-      <li>이 <code>site/index.html</code> 파일을 실제 홈페이지의 <code>index.html</code>로 덮어씁니다.</li>
-      <li>시놀로지 Container Manager에서 프로젝트를 <strong>빌드 후 재시작</strong>합니다.</li>
-    </ol>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&amp;display=swap" rel="stylesheet">
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<style>
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:#0b0d14;color:#f2f4f8;font-family:'Pretendard Variable',Pretendard,system-ui,sans-serif}
+a{color:#6fb3ff;text-decoration:none}a:hover{color:#9cc9ff}
+@keyframes glow{0%,100%{opacity:.7}50%{opacity:1}}
+@media (max-width:720px){[data-nav-desktop]{display:none !important}input,select,textarea{font-size:16px !important}}
+</style>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#0b0d14"/><text x="100" y="118" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="900" font-size="54" fill="#6fb3ff">N</text></svg></template>
+<script>
+
+window.__NOVATIX_DATA = window.__NOVATIX_DATA || {}; window.__NOVATIX_DATA.products = [
+  {
+    id: 'trifold-led',
+    name: '트라이폴드 LED 디스플레이',
+    nameEn: 'TRI-FOLD LED DISPLAY',
+    tagline: 'P2.5 고해상도로 가장 먼저 보이는 것',
+    desc: '접어서 옮기고, 펼쳐서 세우고, 휴대폰·노트북으로 간편하게 송출하는 이동형 LED. 발전기·리깅 없이 2~6대 연결로 인포데스크·웰컴 사인·무대 배경까지.',
+    accent: '#6fb3ff',
+    img: 'assets/uc-infodesk.jpg', // grid 4장이 있으면 2×2 콜라주로 표시
+    hero: 'assets/uc-product.jpg', // 제품 단독컷 — 콜라주 상단에 와이드로 표시
+    grid: ['assets/uc-infodesk.jpg', 'assets/uc-lineup.jpg', 'assets/uc-stage.jpg'],
+    gallery: ['assets/w-infodesk-conference.jpg', 'assets/w-welcome-lineup.jpg', 'assets/w-stage-photowall.jpg'],
+    specs: [
+      { k: '픽셀 피치', v: 'P2.5' },
+      { k: '높이', v: '2070mm' },
+      { k: '연결', v: '2~6대 멀티가능' },
+      { k: '운영', v: '1인 이동가능' },
+      { k: '전력', v: '발전기 불필요 (소량 전력)' },
+    ],
+    priceNote: '렌탈 요금표 제공 · 2일 30% / 3일+ 50% 할인',
+    detailUrl: 'novatix-brochure.html', // 상품 상세 브로슈어 링크 (없으면 '')
+    mediaGuideUrl: 'trifold-media-guide.html', // 미디어 가이드 링크
+    status: 'available',
+  },
+  {
+    id: 'lighting-floor',
+    name: '라이팅 플로어',
+    nameEn: 'LIGHTING FLOOR',
+    tagline: '바닥이 무대가 되는 인터랙티브 연출',
+    desc: '브랜드 컬러·패턴·모션을 바닥 전면에 펼치는 LED 플로어. 트라이폴드 LED와 연동해 벽과 바닥이 하나의 캔버스가 됩니다.',
+    accent: '#b38bff',
+    img: 'assets/w-lightingfloor-room.jpg',
+    gallery: ['assets/w-lightingfloor-brand.jpg', 'assets/w-lightingfloor-render.jpg'],
+    specs: [
+      { k: '구성', v: '타일 모듈형' },
+      { k: '연동', v: 'LED 디스플레이 동기화' },
+      { k: '연출', v: '브랜드 패턴 · 모션' },
+    ],
+    priceNote: '규모별 별도 문의',
+    status: 'available',
+  },
+  {
+    id: 'hologram-3d',
+    name: '3D 홀로그램 터치버튼',
+    nameEn: '3D HOLOGRAM TOUCH BUTTON',
+    tagline: '허공에 떠오르는 브랜드',
+    desc: '홀로그램 팬 디스플레이가 허공에 입체 영상을 띄우고, 터치버튼과 함께 개막 세리머니의 순간을 완성합니다. 버튼을 누르는 순간 영상이 깨어나는 연출로 개막식·퍼포먼스의 몰입감을 극대화합니다.',
+    accent: '#7fe8c3',
+    img: 'assets/hologram-itexpo.png',
+    gallery: [],
+    specs: [
+      { k: '형태', v: '홀로그램 팬 디스플레이' },
+      { k: '활용', v: '부스 · 로비 · 신제품 공개' },
+    ],
+    priceNote: '별도 문의',
+    detailUrl: 'hologram.html',
+    status: 'available',
+  },
+  {
+    id: 'navi-drone',
+    name: '나비드론 퍼포먼스',
+    nameEn: 'NAVI-DRONE PERFORMANCE',
+    tagline: '실내를 나는 빛의 퍼포먼스',
+    desc: '나비 형상의 실내용 드론이 음악과 조명에 맞춰 비행하는 오프닝·하이라이트 퍼포먼스. 개막 세리머니와 시상식의 시선을 사로잡습니다.',
+    accent: '#ff8bb3',
+    img: 'assets/navidrone-stage.png',
+    gallery: [],
+    specs: [
+      { k: '형태', v: '실내 비행 퍼포먼스' },
+      { k: '활용', v: '오프닝 · 시상식 · 세리머니' },
+    ],
+    priceNote: '연출 구성별 별도 문의',
+    status: 'coming',
+  },
+];
+
+window.__NOVATIX_DATA = window.__NOVATIX_DATA || {}; window.__NOVATIX_DATA.services = [
+  '장비 렌탈 + 설치', 'AI 방송 플랫폼 제작', '생중계 시스템', '전문 VJ 파견',
+  '나비드론', '3D 홀로그램 터치버튼', '라이팅 플로어', '행사 연출 컨설팅',
+];
+
+window.__NOVATIX_DATA = window.__NOVATIX_DATA || {}; window.__NOVATIX_DATA.events = [
+
+  {
+    badge: 'PROMOTION',
+    title: '3대 이상 또는 2일 이상 렌탈 시 배송·설치·철거 무료',
+    desc: '트라이폴드 LED 3대 이상 묶음 또는 2일 이상 렌탈 계약 시 배송, 설치, 철거 비용을 전액 지원합니다.',
+    period: '~ 2026. 9. 30 까지',
+    accent: '#6fb3ff',
+  },
+  {
+    badge: 'DISCOUNT',
+    title: '장기 렌탈 할인 — 2일 30% · 3일 이상 50%',
+    desc: '행사 기간이 길수록 커지는 렌탈 할인. 견적 문의 시 자동 적용됩니다.',
+    period: '상시 진행',
+    accent: '#7fe8c3',
+  },
+];
+
+window.__NOVATIX_DATA = window.__NOVATIX_DATA || {}; window.__NOVATIX_DATA.contact = {
+  email: 'novatixlab@gmail.com',
+  instagram: 'https://www.instagram.com/novatixlab', // 인스타그램 주소로 교체
+  kakao: 'http://pf.kakao.com/_xmDNfX/chat', // 카카오톡 채널 1:1 채팅
+  googleForm: '', // 구글 폼 URL 입력 시 예약 버튼이 폼으로 연결
+};
+</script>
+</helmet>
+
+<div style="min-height:100vh;background:#0b0d14">
+  <div style="position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:18px 6vw;background:rgba(11,13,20,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)">
+    <span style="font-family:Archivo,sans-serif;font-weight:900;font-size:19px;letter-spacing:-.02em">NOVATIX LAB</span>
+    <div style="display:flex;gap:22px;align-items:center;font-size:14px;font-weight:600;flex-wrap:wrap;justify-content:flex-end">
+      <a href="#about" data-nav-desktop="1" style="color:rgba(255,255,255,.72);white-space:nowrap">소개</a>
+      <a href="#lineup" data-nav-desktop="1" style="color:rgba(255,255,255,.72);white-space:nowrap">상품</a>
+      <a href="#events" data-nav-desktop="1" style="color:rgba(255,255,255,.72);white-space:nowrap">이벤트</a>
+      <a href="#services" data-nav-desktop="1" style="color:rgba(255,255,255,.72);white-space:nowrap">서비스</a>
+      <a href="story.html" data-nav-desktop="1" style="color:rgba(255,255,255,.72);white-space:nowrap">현장 스토리</a>
+      <a href="admin.html" style="color:rgba(255,255,255,.72);font-size:13.5px;white-space:nowrap;padding:8px 0">로그인</a>
+      <a href="admin.html#signup" data-nav-desktop="1" style="color:#9cc9ff;border:1px solid rgba(111,179,255,.5);padding:8px 16px;border-radius:999px;font-size:13.5px;font-weight:700;white-space:nowrap">회원가입</a>
+      <a href="#booking" style="color:#0b0d14;background:#6fb3ff;padding:9px 18px;border-radius:999px;font-weight:700;white-space:nowrap">예약 문의</a>
+    </div>
   </div>
-</main>
+
+  <div style="position:relative;padding:96px 6vw 80px;text-align:center;overflow:hidden">
+    <div style="position:absolute;left:15%;right:15%;top:-40%;height:80%;background:radial-gradient(ellipse at 50% 0%,rgba(63,131,255,.25),transparent 65%);pointer-events:none;animation:glow 5s ease-in-out infinite"></div>
+    <div style="position:relative;font-size:13px;font-weight:700;letter-spacing:.28em;color:#6fb3ff;margin-bottom:18px">EVENT TECH RENTAL &amp; PRODUCTION</div>
+    <h1 style="position:relative;margin:0;font-size:clamp(34px,5vw,58px);font-weight:800;line-height:1.2;letter-spacing:-.03em">행사장의 공간을 기획하고,<br>경험으로 완성합니다</h1>
+    <p style="position:relative;margin:20px auto 0;max-width:560px;font-size:clamp(15px,1.6vw,18px);line-height:1.7;color:rgba(255,255,255,.62)">트라이폴드 LED부터 라이팅 플로어, 나비드론, 3D 홀로그램까지<br>장비 렌탈과 연출·송출을 한 팀이 책임집니다.</p>
+    <div style="position:relative;margin-top:34px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="#lineup" style="background:#6fb3ff;color:#0b0d14;font-weight:800;font-size:15px;padding:14px 30px;border-radius:999px">상품 보기</a>
+      <a href="#booking" style="border:1px solid rgba(111,179,255,.5);color:#9cc9ff;font-weight:700;font-size:15px;padding:14px 30px;border-radius:999px">바로 예약</a>
+    </div>
+  </div>
+
+  <div id="about" style="padding:70px 6vw;border-top:1px solid rgba(255,255,255,.05)">
+    <div style="max-width:1100px;margin:0 auto">
+      <div style="text-align:center;margin-bottom:40px">
+        <div style="font-size:12px;font-weight:700;letter-spacing:.26em;color:#6fb3ff">ABOUT NOVATIX LAB</div>
+        <h2 style="margin:12px 0 10px;font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.02em">우리는 다음 세상을 만듭니다</h2>
+        <p style="margin:0 auto;max-width:640px;font-size:15px;line-height:1.7;color:rgba(255,255,255,.6)">노바틱스는 기술, 콘텐츠, 공간의 융합을 통해 사람들에게<br>새로운 경험을 만드는 크리에이티브 테크놀로지 브랜드입니다.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:14px">
+        <div style="background:#11141d;border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:26px 28px">
+          <div style="font-family:Archivo,sans-serif;font-weight:900;font-size:26px;color:#7fd1ff;margin-bottom:10px">NOVA</div>
+          <div style="font-size:14px;line-height:1.75;color:rgba(255,255,255,.62)">라틴어로 <b style="color:#fff">'새롭게 빛나는 것'</b>. 천문학에서 갑자기 밝게 빛나는 별 — 새로운 등장, 혁신, 폭발적인 변화를 상징합니다.</div>
+        </div>
+        <div style="background:#11141d;border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:26px 28px">
+          <div style="font-family:Archivo,sans-serif;font-weight:900;font-size:26px;color:#c77dff;margin-bottom:10px">TIX</div>
+          <div style="font-size:14px;line-height:1.75;color:rgba(255,255,255,.62)"><b style="color: rgb(127, 209, 255);">T</b>echnology — 기술 · <br><b style="color: rgb(25, 200, 221);">I</b>nteractive / Innovation — 상호작용과 혁신 · <br><b style="color: rgb(245, 154, 11);">X</b> — eXperience, 확장 가능성</div>
+        </div>
+        <div style="background:#11141d;border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:26px 28px">
+          <div style="font-family:Archivo,sans-serif;font-weight:900;font-size:26px;color:#f59a0b;margin-bottom:10px">LAB</div>
+          <div style="font-size:14px;line-height:1.75;color:rgba(255,255,255,.62)">기술을 <b style="color:#7fd1ff">연구</b>하고, 콘텐츠와 결합해 <b style="color:#19c8dd">실험</b>하고, 실제 행사에 <b style="color:#c77dff">적용</b>하며, 새로운 모델로 <b style="color:#f59a0b">발전</b>시키는 곳.</div>
+        </div>
+      </div>
+      <div style="text-align:center;border:1px solid rgba(111,179,255,.25);border-radius:16px;padding:28px 24px;background:rgba(79,139,255,.06)">
+        <div style="font-size:clamp(16px,2vw,19px);font-weight:800;line-height:1.6">미래 기술과 크리에이티브 콘텐츠를 연구·실험해,<br>새로운 경험을 현실로 만드는 스튜디오</div>
+        <div style="margin-top:10px;font-size:13px;color:#19c8dd;font-weight:700;letter-spacing:.08em">WE CREATE WHAT'S NEXT.</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="lineup" style="padding:40px 6vw 30px">
+    <div style="font-size:12px;font-weight:700;letter-spacing:.26em;color:#6fb3ff;text-align:center">PRODUCT LINEUP</div>
+    <h2 style="margin:12px 0 44px;text-align:center;font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.02em">행사를 완성하는 라인업</h2>
+    <div style="display:flex;flex-direction:column;gap:70px;max-width:1100px;margin:0 auto">
+      <sc-for list="{{ products }}" as="p" hint-placeholder-count="0">
+        <div id="{{ p.id }}" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px;align-items:center;padding:34px;border-radius:20px;background:#11141d;border:1px solid rgba(255,255,255,.06)">
+          <div style="position:relative;border-radius:14px;overflow:hidden;aspect-ratio:{{ p.imgAspect }};background:#191c26">
+            <sc-if value="{{ p.img }}" hint-placeholder-val="{{ false }}">
+              <sc-if value="{{ p.hasGrid }}" hint-placeholder-val="{{ false }}">
+                <div style="position:absolute;inset:0;display:grid;grid-template-columns:{{ p.gridCols }};grid-template-rows:{{ p.gridRows }};gap:5px">
+                  <sc-if value="{{ p.hasHero }}" hint-placeholder-val="{{ false }}">
+                    <div role="img" aria-label="{{ p.name }} 제품" style="grid-column:1 / -1;background-size:contain;background-repeat:no-repeat;background-position:center;background-color:#191c26;background-image:{{ p.heroBg }};border-radius:2px"></div>
+                  </sc-if>
+                  <sc-for list="{{ p.gridBgs }}" as="g" hint-placeholder-count="0">
+                    <div role="img" style="background-size:cover;background-position:center;background-image:{{ g }};border-radius:2px"></div>
+                  </sc-for>
+                </div>
+              </sc-if>
+              <sc-if value="{{ p.noGrid }}" hint-placeholder-val="{{ false }}">
+                <div role="img" aria-label="{{ p.name }}" style="position:absolute;inset:0;background-size:cover;background-position:center;background-image:{{ p.bgImg }}"></div>
+              </sc-if>
+            </sc-if>
+            <sc-if value="{{ p.noImg }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:radial-gradient(ellipse at 50% 40%,rgba(255,255,255,.07),transparent 70%)">
+                <span style="font-family:Archivo,sans-serif;font-weight:900;font-size:15px;letter-spacing:.2em;color:{{ p.accent }}">{{ p.nameEn }}</span>
+                <span style="font-size:12.5px;color:rgba(255,255,255,.4)">실사 이미지 준비 중</span>
+              </div>
+            </sc-if>
+            <sc-if value="{{ p.isComing }}" hint-placeholder-val="{{ false }}">
+              <span style="position:absolute;top:12px;left:12px;font-size:11.5px;font-weight:800;letter-spacing:.1em;background:rgba(11,13,20,.8);border:1px solid rgba(255,255,255,.2);color:#fff;padding:5px 11px;border-radius:999px">COMING SOON</span>
+            </sc-if>
+          </div>
+          <div>
+            <div style="font-size:11.5px;font-weight:800;letter-spacing:.22em;color:{{ p.accent }}">{{ p.nameEn }}</div>
+            <h3 style="margin:10px 0 6px;font-size:26px;font-weight:800;letter-spacing:-.02em">{{ p.name }}</h3>
+            <div style="font-size:16px;font-weight:700;color:rgba(255,255,255,.85)">{{ p.tagline }}</div>
+            <p style="margin:14px 0 18px;font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.6)">{{ p.desc }}</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ p.specs }}" as="s" hint-placeholder-count="3">
+                <span style="font-size:12.5px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.75)"><b style="color:rgba(255,255,255,.45);font-weight:600">{{ s.k }}</b>&nbsp; {{ s.v }}</span>
+              </sc-for>
+            </div>
+            <div style="margin-top:18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+              <a href="#booking" style="background:{{ p.accent }};color:#0b0d14;font-weight:800;font-size:13.5px;padding:11px 22px;border-radius:999px">이 상품 예약하기</a>
+              <sc-if value="{{ p.hasDetail }}" hint-placeholder-val="{{ false }}">
+                <a href="{{ p.detailUrl }}" onClick="{{ p.openDetail }}" style="cursor:pointer;border:1px solid {{ p.accent }};color:{{ p.accent }};font-weight:700;font-size:13.5px;padding:10px 20px;border-radius:999px">상품 상세설명 →</a>
+              </sc-if>
+              <sc-if value="{{ p.hasMediaGuide }}" hint-placeholder-val="{{ false }}">
+                <a href="{{ p.mediaGuideUrl }}" target="_blank" style="border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.75);font-weight:700;font-size:13.5px;padding:10px 20px;border-radius:999px">미디어 가이드 보기 →</a>
+              </sc-if>
+              <sc-if value="{{ p.noDetail }}" hint-placeholder-val="{{ false }}">
+                <span style="font-size:12.5px;color:rgba(255,255,255,.35)">상세자료 준비 중</span>
+              </sc-if>
+              <span style="font-size:12.5px;color:rgba(255,255,255,.45)">{{ p.priceNote }}</span>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div id="cases" style="padding:60px 0 20px">
+    <div style="text-align:center;margin-bottom:30px;padding:0 6vw">
+      <div style="font-size:12px;font-weight:700;letter-spacing:.26em;color:#6fb3ff">SHOWCASE</div>
+      <h2 style="margin:12px 0 0;font-size:clamp(24px,3.2vw,34px);font-weight:800;letter-spacing:-.02em">적용 사례</h2>
+    </div>
+    <div style="position:relative;max-width:1100px;margin:0 auto;padding:0 6vw">
+      <div style="position:relative;border-radius:20px;overflow:hidden;aspect-ratio:16/9;background:#11141d;border:1px solid rgba(255,255,255,.08)">
+        <sc-for list="{{ caseSlides }}" as="cs" hint-placeholder-count="0">
+          <div role="img" aria-label="{{ cs.caption }}" style="position:absolute;inset:0;background-size:cover;background-position:center;background-image:{{ cs.bg }};opacity:{{ cs.opacity }};transition:opacity .7s ease"></div>
+        </sc-for>
+        <div style="position:absolute;left:0;right:0;bottom:0;padding:46px 26px 20px;background:linear-gradient(transparent,rgba(11,13,20,.88))">
+          <div style="font-size:11.5px;font-weight:800;letter-spacing:.18em;color:#6fb3ff">{{ caseTag }}</div>
+          <div style="margin-top:5px;font-size:16.5px;font-weight:800">{{ caseCaption }}</div>
+        </div>
+        <button onClick="{{ casePrev }}" aria-label="이전" style="cursor:pointer;position:absolute;left:14px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(11,13,20,.55);color:#fff;font-size:18px;font-family:inherit">‹</button>
+        <button onClick="{{ caseNext }}" aria-label="다음" style="cursor:pointer;position:absolute;right:14px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(11,13,20,.55);color:#fff;font-size:18px;font-family:inherit">›</button>
+      </div>
+      <div style="display:flex;justify-content:center;gap:8px;margin-top:16px;flex-wrap:wrap">
+        <sc-for list="{{ caseDots }}" as="cd" hint-placeholder-count="0">
+          <button onClick="{{ cd.go }}" aria-label="슬라이드 이동" style="cursor:pointer;width:{{ cd.w }};height:8px;border-radius:999px;border:none;background:{{ cd.bg }};transition:all .3s;padding:0"></button>
+        </sc-for>
+      </div>
+      <div style="text-align:center;margin-top:18px">
+        <a href="story.html" style="font-size:13.5px;font-weight:700;border:1px solid rgba(111,179,255,.4);padding:10px 22px;border-radius:999px">현장 스토리 게시판 전체 보기 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="services" style="padding:80px 6vw">
+    <div style="max-width:1100px;margin:0 auto;padding:44px;border-radius:20px;background:linear-gradient(135deg,rgba(63,131,255,.12),rgba(179,139,255,.08));border:1px solid rgba(111,179,255,.2)">
+      <div style="font-size:12px;font-weight:700;letter-spacing:.26em;color:#6fb3ff">FULL SERVICE</div>
+      <h2 style="margin:12px 0 8px;font-size:clamp(22px,3vw,32px);font-weight:800;letter-spacing:-.02em">장비만 빌려드리지 않습니다</h2>
+      <p style="margin:0 0 26px;font-size:14.5px;color:rgba(255,255,255,.6)">AI 방송 플랫폼 제작부터 전문 VJ 파견까지, 행사 송출 전체를 운영합니다.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+        <sc-for list="{{ services }}" as="sv" hint-placeholder-count="8">
+          <div style="display:flex;align-items:center;gap:10px;padding:14px 16px;border-radius:12px;background:rgba(11,13,20,.5);border:1px solid rgba(255,255,255,.07);font-size:14px;font-weight:600"><span style="width:6px;height:6px;border-radius:50%;background:#6fb3ff;flex-shrink:0"></span>{{ sv }}</div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <div id="events" style="padding:20px 6vw 60px">
+    <div style="max-width:1100px;margin:0 auto">
+      <div style="text-align:center;margin-bottom:34px">
+        <div style="font-size:12px;font-weight:700;letter-spacing:.26em;color:#6fb3ff">EVENT</div>
+        <h2 style="margin:12px 0 0;font-size:clamp(24px,3.2vw,34px);font-weight:800;letter-spacing:-.02em">진행 중인 이벤트</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px">
+        <sc-for list="{{ events }}" as="ev" hint-placeholder-count="0">
+          <div style="position:relative;overflow:hidden;border-radius:18px;background:#11141d;border:1px solid rgba(255,255,255,.08);padding:30px">
+            <div style="position:absolute;right:-20%;top:-40%;width:60%;height:90%;background:radial-gradient(ellipse,{{ ev.glow }},transparent 70%);pointer-events:none"></div>
+            <div style="position:relative;display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+              <span style="font-size:11.5px;font-weight:800;letter-spacing:.16em;color:#0b0d14;background:{{ ev.accent }};padding:5px 12px;border-radius:999px">{{ ev.badge }}</span>
+              <span style="font-size:12.5px;font-weight:700;color:rgba(255,255,255,.5)">{{ ev.period }}</span>
+            </div>
+            <div style="position:relative;font-size:19px;font-weight:800;line-height:1.45;letter-spacing:-.01em">{{ ev.title }}</div>
+            <p style="position:relative;margin:12px 0 18px;font-size:14px;line-height:1.7;color:rgba(255,255,255,.6)">{{ ev.desc }}</p>
+            <a href="#booking" style="position:relative;font-size:13.5px;font-weight:700;color:{{ ev.accent }}">이벤트로 예약하기 →</a>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <div id="booking" style="padding:40px 6vw 100px">
+    <div style="max-width:680px;margin:0 auto;text-align:center">
+      <div style="font-size:12px;font-weight:700;letter-spacing:.26em;color:#6fb3ff">BOOKING</div>
+      <h2 style="margin:12px 0 8px;font-size:clamp(24px,3.2vw,34px);font-weight:800;letter-spacing:-.02em">지금 바로 예약 문의</h2>
+      <p style="margin:0 0 32px;font-size:14.5px;color:rgba(255,255,255,.6)">행사 정보를 남겨주시면 24시간 내 견적과 함께 연락드립니다.</p>
+      <div style="text-align:left;display:flex;flex-direction:column;gap:14px;padding:34px;border-radius:20px;background:#11141d;border:1px solid rgba(255,255,255,.06)">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px">
+          <input value="{{ fName }}" onChange="{{ setName }}" placeholder="성함 / 회사명" style="background:#0b0d14;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:13px 15px;color:#f2f4f8;font-size:14px;font-family:inherit">
+          <input value="{{ fPhone }}" onChange="{{ setPhone }}" placeholder="연락처" style="background:#0b0d14;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:13px 15px;color:#f2f4f8;font-size:14px;font-family:inherit">
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px">
+          <div style="position:relative">
+            <button onClick="{{ toggleCal }}" style="cursor:pointer;width:100%;box-sizing:border-box;text-align:left;background:#0b0d14;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:13px 15px;color:{{ dateColor }};font-size:14px;font-family:inherit;display:flex;justify-content:space-between;align-items:center"><span>{{ dateLabel }}</span><span style="color:#6fb3ff">📅</span></button>
+            <sc-if value="{{ calOpen }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;top:calc(100% + 8px);left:0;z-index:40;width:300px;max-width:80vw;background:#151926;border:1px solid rgba(111,179,255,.35);border-radius:14px;padding:16px;box-shadow:0 14px 40px rgba(0,0,0,.6)">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+                  <button onClick="{{ calPrev }}" style="cursor:pointer;background:transparent;border:1px solid rgba(255,255,255,.15);color:#f2f4f8;border-radius:8px;padding:4px 10px;font-family:inherit;font-size:13px">←</button>
+                  <span style="font-size:14px;font-weight:800">{{ calTitle }}</span>
+                  <button onClick="{{ calNext }}" style="cursor:pointer;background:transparent;border:1px solid rgba(255,255,255,.15);color:#f2f4f8;border-radius:8px;padding:4px 10px;font-family:inherit;font-size:13px">→</button>
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:4px">
+                  <sc-for list="{{ calWeekdays }}" as="w" hint-placeholder-count="7"><div style="text-align:center;font-size:11px;font-weight:700;color:rgba(255,255,255,.4);padding:4px 0">{{ w }}</div></sc-for>
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:2px">
+                  <sc-for list="{{ calDays }}" as="d" hint-placeholder-count="0">
+                    <button onClick="{{ d.pick }}" disabled="{{ d.empty }}" style="cursor:pointer;aspect-ratio:1;border:none;border-radius:8px;font-family:inherit;font-size:12.5px;font-weight:700;background:{{ d.bg }};color:{{ d.color }}">{{ d.day }}</button>
+                  </sc-for>
+                </div>
+                <div style="margin-top:10px;display:flex;justify-content:space-between;align-items:center">
+                  <span style="font-size:12px;color:rgba(255,255,255,.5)">{{ calHint }}</span>
+                  <button onClick="{{ calClear }}" style="cursor:pointer;background:transparent;border:none;color:#6fb3ff;font-size:12px;font-weight:700;font-family:inherit">초기화</button>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+          <div style="display:flex;gap:8px">
+            <input value="{{ fPlace }}" onChange="{{ setPlace }}" placeholder="장소 · 지역 (주소 검색 또는 직접 입력)" style="flex:1;min-width:0;background:#0b0d14;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:13px 15px;color:#f2f4f8;font-size:14px;font-family:inherit">
+            <button onClick="{{ openAddr }}" style="cursor:pointer;flex-shrink:0;background:transparent;border:1px solid rgba(111,179,255,.5);color:#9cc9ff;font-weight:700;font-size:13px;padding:0 16px;border-radius:10px;font-family:inherit">주소 검색</button>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:12.5px;font-weight:700;color:rgba(255,255,255,.55);margin-bottom:8px">관심 상품 선택 <b style="color:#f59a0b">(필수 · 중복 가능)</b></div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <sc-for list="{{ productChips }}" as="c" hint-placeholder-count="4">
+              <button onClick="{{ c.toggle }}" style="cursor:pointer;font-size:13px;font-weight:700;padding:9px 16px;border-radius:999px;font-family:inherit;background:{{ c.bg }};color:{{ c.color }};border:1px solid {{ c.border }}">{{ c.name }}</button>
+            </sc-for>
+          </div>
+          <sc-if value="{{ hasProdQs }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
+              <sc-for list="{{ prodQs }}" as="pq" hint-placeholder-count="0">
+                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 13px;border-radius:10px;background:rgba(111,179,255,.06);border:1px solid rgba(111,179,255,.2)">
+                  <span style="font-size:12.5px;font-weight:700;color:#9cc9ff;white-space:nowrap">{{ pq.label }}</span>
+                  <input value="{{ pq.val }}" onChange="{{ pq.set }}" placeholder="{{ pq.ph }}" style="flex:1;min-width:140px;background:#0b0d14;border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:9px 12px;color:#f2f4f8;font-size:13px;font-family:inherit"></input>
+                  <sc-if value="{{ pq.hasCheck }}" hint-placeholder-val="{{ false }}">
+                    <label style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:rgba(255,255,255,.7);cursor:pointer;white-space:nowrap">
+                      <input type="checkbox" checked="{{ pq.checked }}" onChange="{{ pq.toggleCheck }}"></input> {{ pq.checkLabel }}
+                    </label>
+                  </sc-if>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+        </div>
+        <textarea value="{{ fMsg }}" onChange="{{ setMsg }}" placeholder="행사 내용, 필요 수량, 예산 범위 등을 자유롭게 적어주세요" rows="4" style="background:#0b0d14;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:13px 15px;color:#f2f4f8;font-size:14px;font-family:inherit;resize:vertical"></textarea>
+        <button onClick="{{ sendMail }}" style="cursor:pointer;background:#6fb3ff;color:#0b0d14;font-weight:800;font-size:15px;padding:15px;border-radius:12px;border:none;font-family:inherit">{{ sendLabel }}</button>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <a href="{{ kakaoUrl }}" onClick="{{ openKakao }}" style="cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;background:#fee500;color:#191919;font-weight:800;font-size:14px;padding:13px;border-radius:12px"><svg width="17" height="17" viewBox="0 0 24 24" fill="#191919"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.5.4.4.2-.1 2.7-1.8 3.8-2.6.6.1 1.2.1 1.9.1 5.5 0 10-3.6 10-8s-4.5-8-10-8z"></path></svg>카카오톡 문의</a>
+          <a href="tel:010-4820-4884" style="cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid rgba(111,179,255,.5);color:#9cc9ff;font-weight:800;font-size:14px;padding:13px;border-radius:12px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9cc9ff" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"></path></svg>전화 문의 010-4820-4884</a>
+        </div>
+        <div style="text-align:center;font-size:12.5px;color:rgba(255,255,255,.4)">보내기를 누르면 novatixlab@gmail.com 으로 바로 접수됩니다</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:30px 6vw;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+    <span style="font-family:Archivo,sans-serif;font-weight:900;font-size:15px">NOVATIX LAB</span>
+    <div style="display:flex;align-items:center;gap:14px">
+      <span style="font-size:12.5px;color:rgba(255,255,255,.4)">WE CREATE WHAT'S NEXT. · novatixlab@gmail.com</span>
+      <a href="admin.html" style="font-size:11.5px;color:rgba(255,255,255,.3)">관리자</a>
+    </div>
+  </div>
+
+  <sc-if value="{{ addrOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeAddr }}" style="position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.7);display:flex;align-items:center;justify-content:center;padding:20px">
+      <div onClick="{{ stopProp }}" style="width:100%;max-width:480px;background:#151926;border:1px solid rgba(111,179,255,.35);border-radius:16px;overflow:hidden">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.08)">
+          <span style="font-size:14.5px;font-weight:800">주소 검색</span>
+          <button onClick="{{ closeAddr }}" style="cursor:pointer;background:transparent;border:none;color:rgba(255,255,255,.6);font-size:18px;font-family:inherit">✕</button>
+        </div>
+        <div ref="{{ addrBox }}" style="height:440px;max-height:60vh;background:#fff"></div>
+      </div>
+    </div>
+  </sc-if>
+
+  <div style="position:fixed;right:22px;bottom:22px;z-index:60;display:flex;flex-direction:column;gap:10px">
+    <a href="{{ igUrl }}" onClick="{{ openIg }}" title="인스타그램" style="cursor:pointer;display:flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:50%;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);box-shadow:0 4px 18px rgba(0,0,0,.4)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4.5"></circle><circle cx="17.5" cy="6.5" r="1.3" fill="#fff" stroke="none"></circle></svg></a>
+    <a href="{{ kakaoUrl }}" onClick="{{ openKakao }}" title="카카오톡 문의" style="cursor:pointer;display:flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:50%;background:#fee500;box-shadow:0 4px 18px rgba(0,0,0,.4)"><svg width="24" height="24" viewBox="0 0 24 24" fill="#191919"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7-.2.7-.7 2.6-.8 3-.1.5.2.5.4.4.2-.1 2.7-1.8 3.8-2.6.6.1 1.2.1 1.9.1 5.5 0 10-3.6 10-8s-4.5-8-10-8z"></path></svg></a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { caseIdx: 0, sending: false, products: [], services: [], events: [], fName: '', fPhone: '', fPlace: '', fMsg: '', selected: {}, prodAns: {}, calOpen: false, calYm: [new Date().getFullYear(), new Date().getMonth()], dStart: null, dEnd: null, addrOpen: false };
+  addrBoxRef = el => {
+    if (el && window.daum && window.daum.Postcode) {
+      new daum.Postcode({
+        oncomplete: data => {
+          const addr = data.roadAddress || data.jibunAddress;
+          const extra = data.buildingName ? ' (' + data.buildingName + ')' : '';
+          this.setState({ fPlace: addr + extra, addrOpen: false });
+        },
+        width: '100%', height: '100%',
+      }).embed(el);
+    }
+  };
+  caseList = [
+    { img: 'assets/w-ceremony-wide.jpg', tag: 'CEREMONY', caption: '개막 세리머니 — 트라이폴드 LED 멀티 연결 무대' },
+    { img: 'assets/w-welcome-lineup.jpg', tag: 'WELCOME', caption: '웰컴 사인 라인업 — 행사장 입구 연출' },
+    { img: 'assets/w-infodesk-conference.jpg', tag: 'CONFERENCE', caption: '인포데스크 — 컨퍼런스 안내 사이니지' },
+    { img: 'assets/w-stage-photowall.jpg', tag: 'STAGE', caption: '무대 배경 · 포토월 연출' },
+    { img: 'assets/w-lobby-pgm-relay.jpg', tag: 'RELAY', caption: '로비 생중계 릴레이 송출' },
+    { img: 'assets/holo-scene-itexpo.jpg', tag: 'HOLOGRAM', caption: 'IT EXPO — 3D 홀로그램 터치버튼 연출' },
+    { img: 'assets/holo-scene-aifesta.jpg', tag: 'HOLOGRAM', caption: 'AI FESTA — 홀로그램 개막 퍼포먼스' },
+    { img: 'assets/navidrone-stage.png', tag: 'NAVI-DRONE', caption: '나비드론 — 실내 비행 라이트 퍼포먼스' },
+  ];
+  componentDidMount() {
+    this.caseTimer = setInterval(() => this.setState(s => ({ caseIdx: (s.caseIdx + 1) % this.caseList.length })), 4500);
+    Promise.resolve(window.__NOVATIX_DATA).then(m => {
+      const products = m.products.map(p => {
+        const hasGrid = !!(p.grid && p.grid.length >= 2);
+        const gN = hasGrid ? Math.min(p.grid.length, 4) : 0;
+        return { ...p, noImg: !p.img, isComing: p.status === 'coming', bgImg: p.img ? "url('" + p.img + "')" : 'none',
+          hasGrid, noGrid: !hasGrid && !!p.img, gridBgs: hasGrid ? p.grid.slice(0, 4).map(u => "url('" + u + "')") : [],
+          hasHero: hasGrid && !!p.hero, heroBg: p.hero ? "url('" + p.hero + "')" : 'none',
+          gridCols: gN === 3 ? '1fr 1fr 1fr' : '1fr 1fr',
+          gridRows: hasGrid && p.hero ? (gN === 3 ? '1.6fr 1fr' : '1.25fr 1fr 1fr') : (gN === 3 ? '1fr' : '1fr 1fr'),
+          imgAspect: hasGrid && p.hero ? (gN === 3 ? '16/14' : '16/15') : '16/10',
+          hasDetail: !!p.detailUrl, noDetail: !p.detailUrl, hasMediaGuide: !!p.mediaGuideUrl,
+          openDetail: e => {
+            e.preventDefault();
+            if (!p.detailUrl) return;
+            // 브로슈어는 세로형 문서라 좁고 긴 팝업으로
+            const w = Math.min(620, screen.width - 40), h = Math.min(screen.height - 60, 900);
+            window.open(p.detailUrl, 'novatix_detail', 'width=' + w + ',height=' + h + ',left=' + Math.round((screen.width - w) / 2) + ',top=' + Math.round((screen.height - h) / 2) + ',menubar=no,toolbar=no,location=yes,resizable=yes,scrollbars=yes');
+          } };
+      });
+      const events = (m.events || []).map(ev => ({ ...ev, glow: ev.accent + '33' }));
+      this.setState({ products, services: m.services, events, igUrl: m.contact.instagram || '#', kakaoUrl: m.contact.kakao || '#' });
+    });
+  }
+  componentWillUnmount() { if (this.caseTimer) clearInterval(this.caseTimer); }
+  goCase(i) {
+    clearInterval(this.caseTimer);
+    this.caseTimer = setInterval(() => this.setState(s => ({ caseIdx: (s.caseIdx + 1) % this.caseList.length })), 4500);
+    this.setState({ caseIdx: (i + this.caseList.length) % this.caseList.length });
+  }
+  renderVals() {
+    const s = this.state;
+    const bind = k => e => this.setState({ [k]: e.target.value });
+    const productChips = s.products.map(p => {
+      const on = !!s.selected[p.id];
+      return {
+        name: p.name, 
+        bg: on ? p.accent : 'rgba(255,255,255,.04)',
+        color: on ? '#0b0d14' : 'rgba(255,255,255,.7)',
+        border: on ? p.accent : 'rgba(255,255,255,.15)',
+        toggle: () => this.setState(st => ({ selected: { ...st.selected, [p.id]: !st.selected[p.id] } })),
+      };
+    });
+    const sendMail = () => {
+      if (s.sending) return;
+      if (!s.fName.trim()) return alert('성함/회사명을 입력해주세요');
+      if (!s.fPhone.trim()) return alert('연락처를 입력해주세요');
+      if (!Object.values(s.selected).some(Boolean)) return alert('관심 상품을 하나 이상 선택해주세요 (중복 선택 가능)');
+      const picked = s.products.filter(p => s.selected[p.id]).map(p => p.name).join(', ');
+      const QL = { 'trifold-led': '트라이폴드 LED 필요 수량', 'lighting-floor': '라이팅 플로어 바닥 면적', 'hologram-3d': '홀로그램 터치버튼 수량', 'navi-drone': '나비드론 수량' };
+      const detail = Object.keys(QL).filter(id => s.selected[id]).map(id => {
+        const a = s.prodAns[id] || {};
+        let line = '- ' + QL[id] + ': ' + (a.val || '미기재');
+        if (id === 'trifold-led') line += ' / 실내·엘리베이터 이동 가능: ' + (a.checked ? '예' : '확인 필요');
+        return line;
+      }).join('\n');
+      const body = ['[NOVATIX LAB 예약 문의]', '', '성함/회사명: ' + s.fName, '연락처: ' + s.fPhone,
+        '행사 날짜: ' + this.dateText(), '장소: ' + s.fPlace, '관심 상품: ' + picked, '', '상품별 요청:', detail, '', '문의 내용:', s.fMsg].join('\n');
+      // 1) 관리자 문의 내역에 저장
+      try {
+        const list = JSON.parse(localStorage.getItem('novatix-inquiries-v1') || '[]');
+        list.push({ ts: Date.now(), date: new Date().toISOString().slice(0, 10), name: s.fName.trim(), phone: s.fPhone.trim(), place: s.fPlace, period: this.dateText(), picked, msg: s.fMsg, status: '신규' });
+        localStorage.setItem('novatix-inquiries-v1', JSON.stringify(list));
+      } catch (e) {}
+      // 2) 텔레그램 알림 (관리자 페이지에서 봇 설정 시)
+      try {
+        const tg = JSON.parse(localStorage.getItem('novatix-telegram-v1') || 'null');
+        if (tg && tg.token && tg.chatId) fetch('https://api.telegram.org/bot' + tg.token + '/sendMessage', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chat_id: tg.chatId, text: '🔔 ' + body }),
+        }).catch(() => {});
+      } catch (e) {}
+      // 3) novatixlab@gmail.com 으로 바로 전송 (메일 앱 안 열림)
+      this.setState({ sending: true });
+      fetch('https://formsubmit.co/ajax/novatixlab@gmail.com', {
+        method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ _subject: '[예약 문의] ' + (s.fName || '행사 문의'), _template: 'box', 문의내용: body }),
+      }).then(r => r.json()).then(j => {
+        this.setState({ sending: false });
+        if (j.success === 'true' || j.success === true) {
+          alert('문의가 접수되었습니다! 확인 후 빠르게 연락드리겠습니다.');
+          this.setState({ fName: '', fPhone: '', fPlace: '', fMsg: '', selected: {}, prodAns: {} });
+        } else {
+          alert('전송에 실패했습니다 — 잠시 후 다시 시도하거나 카카오톡으로 문의해주세요.');
+        }
+      }).catch(() => {
+        this.setState({ sending: false });
+        alert('전송에 실패했습니다 — 인터넷 연결을 확인하거나 카카오톡으로 문의해주세요.');
+      });
+    };
+    const [Y, M] = s.calYm;
+    const startDow = new Date(Y, M, 1).getDay(), days = new Date(Y, M + 1, 0).getDate();
+    const inRange = t => s.dStart && s.dEnd && t >= Math.min(s.dStart, s.dEnd) && t <= Math.max(s.dStart, s.dEnd);
+    const calDays = [];
+    for (let i = 0; i < startDow; i++) calDays.push({ day: '', empty: true, bg: 'transparent', color: 'transparent', pick: () => {} });
+    for (let d = 1; d <= days; d++) {
+      const t = new Date(Y, M, d).getTime();
+      const isEdge = t === s.dStart || t === s.dEnd;
+      calDays.push({ day: d, empty: false,
+        bg: isEdge ? '#6fb3ff' : inRange(t) ? 'rgba(111,179,255,.22)' : 'transparent',
+        color: isEdge ? '#0b0d14' : '#f2f4f8',
+        pick: () => {
+          if (!s.dStart || (s.dStart && s.dEnd)) this.setState({ dStart: t, dEnd: null });
+          else this.setState({ dEnd: t, calOpen: false });
+        } });
+    }
+    const popup = url => e => {
+      e.preventDefault();
+      if (!url || url === '#') return;
+      const w = Math.min(480, screen.width - 40), h = Math.min(760, screen.height - 80);
+      window.open(url, 'novatix_sns', 'width=' + w + ',height=' + h + ',left=' + Math.round((screen.width - w) / 2) + ',top=' + Math.round((screen.height - h) / 2) + ',menubar=no,toolbar=no,location=yes,resizable=yes,scrollbars=yes');
+    };
+    const ci = s.caseIdx % this.caseList.length;
+    return { products: s.products, services: s.services, events: s.events, igUrl: s.igUrl || '#', kakaoUrl: s.kakaoUrl || '#', productChips, sendMail,
+      sendLabel: s.sending ? '⏳ 접수 중…' : '예약 문의 바로 보내기',
+      caseSlides: this.caseList.map((c, i) => ({ bg: 'url("' + c.img + '")', caption: c.caption, opacity: i === ci ? 1 : 0 })),
+      caseTag: this.caseList[ci].tag, caseCaption: this.caseList[ci].caption,
+      casePrev: () => this.goCase(ci - 1), caseNext: () => this.goCase(ci + 1),
+      caseDots: this.caseList.map((c, i) => ({ go: () => this.goCase(i), w: i === ci ? '26px' : '8px', bg: i === ci ? '#6fb3ff' : 'rgba(255,255,255,.25)' })),
+      openIg: popup(s.igUrl), openKakao: popup(s.kakaoUrl),
+      hasProdQs: Object.values(s.selected).some(Boolean),
+      prodQs: [
+        { id: 'trifold-led', label: '트라이폴드 LED', ph: '몇 대가 필요하신가요?', check: '실내용 · 엘리베이터 등 이동 가능한 공간입니다' },
+        { id: 'lighting-floor', label: '라이팅 플로어', ph: '바닥 면적 — 가로×세로 몇 m 필요하신가요?' },
+        { id: 'hologram-3d', label: '홀로그램 터치버튼', ph: '버튼이 몇 개 필요하신가요?' },
+        { id: 'navi-drone', label: '나비드론', ph: '몇 대가 필요하신가요?' },
+      ].filter(q => s.selected[q.id]).map(q => ({
+        label: q.label, ph: q.ph,
+        val: (s.prodAns[q.id] || {}).val || '',
+        set: e => this.setState({ prodAns: { ...s.prodAns, [q.id]: { ...(s.prodAns[q.id] || {}), val: e.target.value } } }),
+        hasCheck: !!q.check, checkLabel: q.check || '',
+        checked: !!(s.prodAns[q.id] || {}).checked,
+        toggleCheck: e => this.setState({ prodAns: { ...s.prodAns, [q.id]: { ...(s.prodAns[q.id] || {}), checked: e.target.checked } } }),
+      })),
+      fName: s.fName, fPhone: s.fPhone, fPlace: s.fPlace, fMsg: s.fMsg,
+      setName: bind('fName'), setPhone: bind('fPhone'), setPlace: bind('fPlace'), setMsg: bind('fMsg'),
+      calOpen: s.calOpen, toggleCal: () => this.setState({ calOpen: !s.calOpen }),
+      dateLabel: this.dateText() || '행사 날짜 · 기간 선택', dateColor: s.dStart ? '#f2f4f8' : 'rgba(255,255,255,.45)',
+      calTitle: Y + '년 ' + (M + 1) + '월', calWeekdays: ['일', '월', '화', '수', '목', '금', '토'], calDays,
+      calPrev: () => this.setState({ calYm: M === 0 ? [Y - 1, 11] : [Y, M - 1] }),
+      calNext: () => this.setState({ calYm: M === 11 ? [Y + 1, 0] : [Y, M + 1] }),
+      calClear: () => this.setState({ dStart: null, dEnd: null }),
+      calHint: !s.dStart ? '시작일을 선택하세요' : !s.dEnd ? '종료일을 선택하세요 (하루면 같은 날 클릭)' : '선택 완료',
+      addrOpen: s.addrOpen, addrBox: this.addrBoxRef,
+      openAddr: () => this.setState({ addrOpen: true }),
+      closeAddr: () => this.setState({ addrOpen: false }),
+      stopProp: e => e.stopPropagation() };
+  }
+  dateText() {
+    const { dStart, dEnd } = this.state;
+    if (!dStart) return '';
+    const f = t => { const d = new Date(t); return d.getFullYear() + '. ' + (d.getMonth() + 1) + '. ' + d.getDate() + '.'; };
+    if (!dEnd || dEnd === dStart) return f(dStart);
+    const a = Math.min(dStart, dEnd), b = Math.max(dStart, dEnd);
+    return f(a) + ' ~ ' + f(b) + ' (' + (Math.round((b - a) / 86400000) + 1) + '일)';
+  }
+}
+</script>
 </body>
 </html>
